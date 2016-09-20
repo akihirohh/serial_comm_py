@@ -8,7 +8,11 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   rospy
   std_msgs
+  message_generation
 )
+add_service_files( FILES Device.srv)
+
+generate_messages (DEPENDENCIES std_msgs)
 
 catkin_package(
 #  INCLUDE_DIRS include
